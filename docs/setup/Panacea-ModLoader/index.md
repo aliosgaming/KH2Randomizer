@@ -5,8 +5,8 @@ Index:
 * [Downloads](#resources-needed)
 * [Installing the Mod Manager & Seed Generator](#installing-openkh-mod-manager-and-seed-generator)
 * [Setting up the Mod Manager](#how-to-setup-the-mod-manager)
-* [Installing the GoA mod](#garden-of-assemblage-mod-installation)
 * [Installing Lua Backend](#lua-backend-installation)
+* [Installing the GoA mod](#garden-of-assemblage-mod-installation)
 * [Installing a new seed](#installing-a-new-seed-to-play)
 * [Stability Notes](#you-are-now-ready-to-play-the-kh2-randomizer)
 
@@ -24,7 +24,7 @@ Index:
 
 ## Installing OpenKH Mod Manager and Seed Generator
 1. Install .NET6 Runtime by running the `runtime-desktop-6.0.13-windows-x64-installer` executable you just downloaded
-2. Create a KH2 Rando folder somewhere on your PC (__This **cannot** be under a Microsoft "OneDrive" directory__). This is where you will put all your randomizer tools
+2. Create a KH2 Rando folder somewhere on your PC (__This **cannot** be under a Microsoft "OneDrive" directory, nor should you install on an external hard drive__). This is where you will put the Randomizer software
 3. Extract OpenKH Mod Manager to this folder 
 4. Extract the Seed Generator to this Folder (Be sure to extract ALL files from the zip)
 	- It's recommended to give each app its own subfolder to make navigating their files easier (See screenshot)
@@ -53,6 +53,21 @@ Index:
 
 ![Extraction Window](../images/Panacea-ModLoader/Extraction%20Window.png)
 
+## Lua Backend Installation:
+1. Open the seed Generator Program `KH2 Randomizer.exe`
+2. In the top left click on the **"Configure"** tab, then click on **"Luabackend Hook Setup (PC Only)**
+
+![Backend Hook Setup 1](../images/Panacea-ModLoader/Backend%20Hook%20Setup%201.png)
+
+3. In this new window click on **"browse"** next to the OpenKh Location, and browse to your openkh folder, then click **"select folder"**
+4. For **"Mod mode"**, click the drop down and select **"Panacea/Mod Loader"**
+5. Click on **"Check configuration"**
+	* *The status messages below should say "Not Found"*
+
+6. Now click on the **"Download/Install/Configure"** button in the bottom left. You can now close this window.
+
+![Backend Hook Setup 2](../images/Panacea-ModLoader/LuaBackend%20Hook%20Setup%202.gif)
+
 ## Garden of Assemblage Mod Installation:
 Installing new mods into the mods manager is easy! Follow these steps to get the main Garden of Assemblage mod installed:
 
@@ -77,27 +92,12 @@ Installing new mods into the mods manager is easy! Follow these steps to get the
 
 * *Note: Newly enabled mods won't show up in game unless you **"Build"** after enabling them*
 
-## Lua Backend Installation:
-1. Open the seed Generator Program `KH2 Randomizer.exe`
-2. In the top left click on the **"Configure"** tab, then click on **"Luabackend Hook Setup (PC Only)**
-
-![Backend Hook Setup 1](../images/Panacea-ModLoader/Backend%20Hook%20Setup%201.png)
-
-3. In this new window click on **"browse"** next to the OpenKh Location, and browse to your openkh folder, then click **"select folder"**
-4. For **"Mod mode"**, click the drop down and select **"Panacea/Mod Loader"**
-5. Click on **"Check configuration"**
-	* *The status messages below should say "Not Found"*
-
-6. Now click on the **"Download/Install/Configure"** button in the bottom left. You can now close this window.
-
-![Backend Hook Setup 2](../images/Panacea-ModLoader/LuaBackend%20Hook%20Setup%202.gif)
-
 ## Installing a new seed to play:
 1. Choose your seed settings in the generator window and then click on **"Generate Seed"** in the bottom right.
 
 ![Generate Seed](../images/Panacea-ModLoader/Generate%20Seed.png)
 
-*If you choose settings that may not act the same between the PCSX2 and PC version, the button will separate between PC and PCSX2, be sure to click the right one if it does so.*
+*Some settings act differently between the PC and Emulator versions of the game (example: Boss Enemy Rando). If you enable one of these settings then the "Generate Seed" button will split into two separate buttons for PC and Emulator. Be sure you click the right one for your game version.
 
 2. This will open up a window to save the seed as a zip file. Save it anywhere that works for you (I like to place it in the same folder as the generator)
 3. Once saved, open up the mod manager and click on **"Mods"**, then **"Install a New Mod"**
@@ -113,14 +113,14 @@ Installing new mods into the mods manager is easy! Follow these steps to get the
 
 * **KH2FM-Mods-equations19/auto-save** - This mod auto saves the game for you as you enter rooms. Be sure to make at least 1 regular save in game, then if you ever crash or your game closes unexpectedly, just hold the **SELECT** button while loading a save, and the auto-save will be loaded instead.
 * **KH2FM-Mods-equations19/soft-reset** - Hold **L1+L2+R1+R2+Start** at the same time to immediately reset the game to the start screen. Very useful if you accidentally softlock in boss/enemy rando, or just to restart the game faster!
-* **[KH2 Rando Tracker](https://github.com/Dee-Ayy/KH2Tracker/releases/latest)** - Not an OpenKH mod but instead a full fledged automated tracker program for the Important Checks in game. Checkout [Hint Systems](https://kh2rando.com/hints) for info about different ways to play Rando!
+* **[KH2 Rando Tracker](https://github.com/Dee-Ayy/KH2Tracker/releases/latest)** - Not an OpenKH mod but instead a full automated tracking program for the Important Checks in game. Checkout [Hint Systems](https://kh2rando.com/hints) for info about different ways to play Rando!
 
 
 # *You are now ready to play the KH2 Randomizer!*
 
 __Technical And Stability Notes__
 1. As mentioned earlier in the guide, the Mod Manager/Lua doesn't seem to work if the folder is under a "OneDrive" directory. We don't know exactly why but it's a conistent thing between users. Be sure to move your folders and re-run the setup wizards if you installed in a "OneDrive" directory.
-2.. Recommended to set fps limit to **60fps**.
+2. Recommended to set fps limit to **60fps**.
 3. Recommended to run game in windows/borderless windowed mode. Fullscreen is stable but the game can crash if you alt-tab out.
 4. Overlays that hook onto the game process (Steam, RivaTuner, Nvidia Overlay, etc) and recording programs (Obs, Streamlabs, Xsplit) seem to decrease stability when playing rando. It's recommended to disable them, or in the case of recording programs use window/desktop capture, in order to minimize your chances of a crash.
 5. GoA ROM and the Seed Generator will always be compatible with one another. Any other mods beyond that should be compatible as long as they don't overlap on changes. Mods at the top of the list will overwrite mods below them if there's any overlapping files. Feel free to ask in the [Community Discord](https://discord.gg/vKhdwNAmzE) if you aren't sure.
