@@ -24,7 +24,7 @@ Index:
 
 ## Installing OpenKH Mod Manager and Seed Generator
 1. Install .NET6 Runtime by running the `runtime-desktop-6.0.13-windows-x64-installer` executable you just downloaded
-2. Create a KH2 Rando folder somewhere on your PC (__This **cannot** be under a Microsoft "OneDrive" directory__). This is where you will put all your randomizer tools
+2. Create a KH2 Rando folder on the same drive your game is installed on. (__This **cannot** be under a Microsoft "OneDrive" directory__). This is where you will put all your randomizer tools. Recommended not to have these files on an external hard drive either.
 3. Extract OpenKH Mod Manager to this folder 
 4. Extract the Seed Generator to this Folder (Be sure to extract ALL files from the zip)
 	- It's recommended to give each app its own subfolder to make navigating their files easier (See screenshot)
